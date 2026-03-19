@@ -1,0 +1,76 @@
+@import './styles/colors.css';
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-family);
+  color: var(--color-dark);
+  background-color: var(--color-white);
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.5rem;
+}
+
+p {
+  color: #555;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: var(--font-family);
+  cursor: pointer;
+  border: none;
+  transition: all var(--transition-base);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: lightgray;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #294e7a;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4f6b8e;
+}
+
+button:focus,
+a:focus {
+  outline: 2px solid #294e7a;
+  outline-offset: 2px;
+}

@@ -8,6 +8,8 @@ function Hero() {
         <div className="hero-content">
           <img src={beaconLogo} alt="Beacon Logo" className="beacon-logo" />
 
+          <h3> Welcome to the coast! Build something, guide others. </h3> 
+
           <button className="btn btn-primary btn-rsvp">
             RSVP!
           </button>

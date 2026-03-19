@@ -1,0 +1,27 @@
+@import './styles/colors.css';
+
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--color-white);
+}
+
+.main-content {
+  flex: 1;
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.75rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+}
