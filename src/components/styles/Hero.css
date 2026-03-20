@@ -105,7 +105,6 @@
 .hero-next-bg {
   width: 100%;
   min-height: 1vh;
-  background: linear-gradient(180deg, transparent 0%, rgba(27, 127, 168, 0.03) 100%);
 }
 
 .btn {
