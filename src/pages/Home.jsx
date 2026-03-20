@@ -1,6 +1,4 @@
 import Hero from '../components/Hero'
-import FeaturesCards from '../components/FeaturesCards'
-import PrizeCarousel from '../components/PrizeCarousel'
 import { TextSection } from '../components/TextSection'
 
 function Home() {
