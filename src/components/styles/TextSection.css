@@ -1,0 +1,49 @@
+@import 'src/styles/colors.css';
+
+.text-section {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 4rem 1.5rem;
+  color: var(--color-dark);
+  line-height: 1.6;
+}
+
+.text-section h2 {
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  margin-bottom: 1.25rem;
+  font-weight: 700;
+  letter-spacing: 0.0em;
+}
+
+.text-section p {
+  font-size: 1.05rem;
+  margin-bottom: 1.25rem;
+  max-width: 44rem;
+}
+
+.text-section p + p {
+  margin-top: 0.75rem;
+}
+
+.text-section a {
+  text-decoration: underline;
+  color: var(--color-ocean-light);
+}
+
+.text-section a:hover {
+  color: var(--color-ocean);
+}
+
+@media (max-width: 640px) {
+  .text-section {
+    padding: 3rem 1rem;
+  }
+
+  .text-section h2 {
+    font-size: 2rem;
+  }
+
+  .text-section p {
+    font-size: 1rem;
+  }
+}
