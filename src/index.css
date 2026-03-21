@@ -4,6 +4,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: var(--font-family);
 }
 
 html {
@@ -11,7 +12,7 @@ html {
 }
 
 body {
-  font-family: var(--font-family);
+
   color: var(--color-dark);
   background-color: var(--color-white);
   line-height: 1.6;
@@ -74,3 +75,4 @@ a:focus {
   outline: 2px solid #294e7a;
   outline-offset: 2px;
 }
+

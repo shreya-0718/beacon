@@ -50,6 +50,7 @@
   justify-content: center;
   gap: 2rem;
   text-align: center;
+  color: #2a4c7a;
 }
 
 .beacon-logo {
@@ -116,7 +117,7 @@
 }
 
 .btn-primary {
-  background: #294e7a;
+  background: var(--color-ocean);
   color: var(--color-white);
   border: 2px solid transparent;
 
@@ -158,4 +159,24 @@
     font-size: 1rem;
     padding: 0.8rem 1.5rem;
   }
+}
+
+.flag-link {
+  position: fixed;     
+  top: -2px;       
+  left: 30px;          
+  z-index: 2000;       
+  cursor: pointer;
+  display: inline-block;
+  transition: transform 0.2s;
+}
+
+.flag-link:hover {
+  transform: scale(1.5); 
+}
+
+.flag-svg {
+  transform: scale(1.2);          
+  height: auto;
+  display: block;
 }

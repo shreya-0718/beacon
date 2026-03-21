@@ -3,15 +3,28 @@
   --color-sand-dark: #E8D4B8;     
   --color-ocean: #294e7a;         
   --color-ocean-light: #4f6b8e;    
-  --color-lighthouse: #D85D3C;     
+  --color-red: #6A0000;     
   --color-white: #FFFFFF;
   --color-dark: #2C3E50;          
-  
-  --font-family: 'Hammersmith One', sans-serif;
-  
+    
   --radius-sm: 0.5rem;
   --radius-md: 1rem;
   --radius-lg: 1.5rem;
   
+  --font-family: "Hammersmith One", sans serif;
+
   --transition-base: 250ms ease;
+}
+
+.flag-link {
+  display: inline-block;
+  transition: transform 0.25s ease;
+}
+
+.flag-link:hover {
+  transform: rotate(-5deg) scale(1.05);
+}
+
+.flag-svg {
+  width: 120px; 
 }

@@ -1,0 +1,161 @@
+@import '../../styles/colors.css';
+
+.ks-section-wrapper {
+  width: 100%;
+}
+
+.ks-header {
+  width: 100%;
+  color: #2a4c7a; 
+  font-size: 36px;
+  text-align: center;
+  padding:  0;
+  font-family: inherit;
+}
+
+.ks-section {
+  padding: 60px 20px;
+  background: white;
+  display: flex;
+  justify-content: center;
+}
+
+.ks-cards {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.ks-card {
+  width: 360px;
+  padding: 28px 24px;
+  position: relative;
+  z-index: 1;
+  background: white;
+  text-align: left;
+  clip-path: polygon(
+    0% 2%, 3% 0%, 6% 3%, 9% 1%, 12% 4%, 15% 0%, 18% 3%, 21% 1%, 24% 4%, 27% 0%,
+    30% 3%, 33% 1%, 36% 4%, 39% 0%, 42% 3%, 45% 1%, 48% 4%, 51% 0%, 54% 3%,
+    57% 1%, 60% 4%, 63% 0%, 66% 3%, 69% 1%, 72% 4%, 75% 0%, 78% 3%, 81% 1%,
+    84% 4%, 87% 0%, 90% 3%, 93% 1%, 96% 4%, 100% 2%,
+    100% 5%, 98% 8%, 100% 11%, 98% 14%, 100% 17%, 98% 20%, 100% 23%, 98% 26%,
+    100% 29%, 98% 32%, 100% 35%, 98% 38%, 100% 41%, 98% 44%, 100% 47%, 98% 50%,
+    100% 53%, 98% 56%, 100% 59%, 98% 62%, 100% 65%, 98% 68%, 100% 71%, 98% 74%,
+    100% 77%, 98% 80%, 100% 83%, 98% 86%, 100% 89%, 98% 92%, 100% 95%,
+    100% 98%, 97% 100%, 94% 97%, 91% 99%, 88% 96%, 85% 100%, 82% 97%, 79% 99%,
+    76% 96%, 73% 100%, 70% 97%, 67% 99%, 64% 96%, 61% 100%, 58% 97%, 55% 99%,
+    52% 96%, 49% 100%, 46% 97%, 43% 99%, 40% 96%, 37% 100%, 34% 97%, 31% 99%,
+    28% 96%, 25% 100%, 22% 97%, 19% 99%, 16% 96%, 13% 100%, 10% 97%, 7% 99%,
+    4% 96%, 0% 98%,
+    0% 95%, 2% 92%, 0% 89%, 2% 86%, 0% 83%, 2% 80%, 0% 77%, 2% 74%,
+    0% 71%, 2% 68%, 0% 65%, 2% 62%, 0% 59%, 2% 56%, 0% 53%, 2% 50%,
+    0% 47%, 2% 44%, 0% 41%, 2% 38%, 0% 35%, 2% 32%, 0% 29%, 2% 26%,
+    0% 23%, 2% 20%, 0% 17%, 2% 14%, 0% 11%, 2% 8%, 0% 5%
+  );
+  box-shadow: 0 4px 8px rgba(0,0,0,0.08);
+  transition: transform 0.25s ease;
+}
+
+.ks-card::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: var(--color-ocean); 
+  z-index: -1;
+  clip-path: inherit;
+  transform: scale(1.03);
+  transform-origin: center;
+}
+
+.ks-card.selected::after {
+  background: var(--color-red);
+  transform: scale(1.05);
+}
+
+.ks-card:hover {
+  transform: rotate(1.5deg);
+}
+
+.ks-img {
+  width: 70px;
+  height: 70px;
+  object-fit: contain;
+  margin-bottom: 12px;
+}
+
+.ks-title {
+  font-size: 28px;
+  color: white;
+  margin-bottom: 12px;
+}
+
+.ks-desc {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 14px;
+  color: white;
+  line-height: 1.55;
+  margin-bottom: 16px;
+}
+
+.ks-btn {
+  background: #750000;
+  color: white;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 15px;
+  cursor: pointer;
+  transition: background 0.2s ease;
+  display: block;     
+  margin: 0 auto;
+}
+
+.ks-btn:hover {
+  background: var(--color-red);
+}
+
+.ks-divider {
+  font-family: 'Edu NSW ACT Cursive', cursive;
+  font-size: 22px;
+  color: #2a4c7a;
+  opacity: 0.7;
+  margin: 40px 0;
+  text-align: center;
+}
+
+.my-row {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;            
+  width: 100%;
+}
+
+.ks-desc a {
+  color: white;
+  text-decoration: underline;
+  font-weight: 500;
+  font-family: 'Edu NSW ACT Cursive', cursive;
+}
+
+.ks-desc a:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 900px) {
+  .ks-cards {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 500px) {
+  .ks-img {
+    width: 50px;
+    height: 50px;
+  }
+  .ks-title {
+    font-size: 24px;
+  }
+}
