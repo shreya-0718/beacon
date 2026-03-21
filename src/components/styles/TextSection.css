@@ -25,6 +25,10 @@
   margin-top: 0.75rem;
 }
 
+.text-section h3 + p {
+  margin-top: 0.75rem;
+}
+
 .text-section a {
   text-decoration: underline;
   color: var(--color-ocean-light);
