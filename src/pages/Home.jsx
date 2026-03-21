@@ -5,9 +5,6 @@ import { TextSection } from '../components/TextSection';
 
 import KeeperSailorSection from '../components/KeeperSailorSection';
 import MapSection from '../components/MapSection';
-import FAQSection from '../components/FAQSection';
-import FooterCoastlinePlaceholder from '../components/FooterCoastlinePlaceholder';
-import Flag from '../images/flag-orpheus-top.svg';
 
 function Home() {
   console.log('Home component rendering');
@@ -53,11 +50,8 @@ function Home() {
         </p>
       </TextSection>
 
-      {/* NEW SECTIONS BELOW */}
       <KeeperSailorSection onPathSelect={setSelectedPath} />
-      <MapSection path={selectedPath} />
-      <FAQSection />
-      <FooterCoastlinePlaceholder />
+      <MapSection selectedPath={selectedPath}/>
     </div>
   );
 }
