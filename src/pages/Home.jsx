@@ -5,6 +5,7 @@ import Hero from '../components/Hero';
 import KeeperSailorSection from '../components/KeeperSailorSection';
 import MapSection from '../components/MapSection';
 import FAQSection from '../components/FAQSection';
+import PrizeCarousel from "../components/PrizeCarousel";
 
 function Home() {
   console.log('Home component rendering');
@@ -18,6 +19,7 @@ function Home() {
       <Hero />
       <KeeperSailorSection onPathSelect={setSelectedPath} />
       <MapSection selectedPath={selectedPath}/>
+      <PrizeCarousel/>
       <FAQSection/>
     </div>
   );
