@@ -2,6 +2,7 @@ html {
   background-image: url('./images/watercolor-bg.jpg');
   background-size: 100% 100%;
   background-repeat: no-repeat;
+  scroll-behavior: smooth;
 }
 
 * {
@@ -11,12 +12,7 @@ html {
   font-family: var(--font-family);
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 body {
-
   color: var(--color-dark);
   line-height: 1.6;
   font-size: 1rem;
@@ -27,17 +23,9 @@ h1, h2, h3, h4, h5, h6 {
   line-height: 1.2;
 }
 
-h1 {
-  font-size: 2.5rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.5rem;
-}
+h1 { font-size: 2.5rem; }
+h2 { font-size: 2rem; }
+h3 { font-size: 1.5rem; }
 
 p {
   color: #555;
@@ -50,7 +38,6 @@ a {
 
 button {
   font-family: var(--font-family);
-  cursor: pointer;
   border: none;
   transition: all var(--transition-base);
 }
@@ -78,4 +65,3 @@ a:focus {
   outline: 2px solid #294e7a;
   outline-offset: 2px;
 }
-
