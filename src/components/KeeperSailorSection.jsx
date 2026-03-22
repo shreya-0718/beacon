@@ -1,6 +1,9 @@
 import React, { useState } from 'react';
 import './styles/KeeperSailorSection.css';
 
+import lighthouse from '../images/lighthouse.png';
+import boat from '../images/boat.png';
+
 const KeeperSailorSection = ({ onPathSelect }) => {
   const [selectedPath, setSelectedPath] = useState(null);
 
@@ -27,7 +30,7 @@ const KeeperSailorSection = ({ onPathSelect }) => {
           <div className={`ks-card ${selectedPath === 'keeper' ? 'selected' : ''}`}>
             <div className="my-row">
               <h3 className="ks-title">A Keeper</h3>
-              <img src={'src/images/lighthouse.png'} alt="Keeper" className="ks-img" />
+              <img src={lighthouse} alt="Keeper" className="ks-img" />
             </div>
 
             <p className="ks-desc">
@@ -58,7 +61,7 @@ const KeeperSailorSection = ({ onPathSelect }) => {
           <div className={`ks-card ${selectedPath === 'sailor' ? 'selected' : ''}`}>
             <div className="my-row">
               <h3 className="ks-title">A Sailor</h3>
-              <img src={'src/images/boat.png'} alt="Sailor" className="ks-img" />
+              <img src={boat} alt="Sailor" className="ks-img" />
             </div>
 
             <p className="ks-desc">
