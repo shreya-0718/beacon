@@ -1,46 +1,44 @@
 import { useEffect, useState } from "react"
 
 const images = import.meta.glob("../images/prizes/*.{png,jpg,jpeg,svg}", { eager: true })
-const prizeImages = Object.values(images).map((m) => m.default)
+
+const prizeImages = Object.entries(images).map(([path, mod]) => ({
+  src: mod.default,
+  name: path.split("/").pop().split(".")[0], 
+}))
 
 export default function PrizeCarousel({
   circleThickness = 8,
   redColor = "#7a0000",
   blueColor = "var(--color-ocean)",
-  slideSpeed = 15, 
-  imageSize = 150, 
+  slideSpeed = 15,
+  imageSize = 150,
+  gap = 20,
 }) {
   const [offset, setOffset] = useState(0)
 
   useEffect(() => {
     if (prizeImages.length === 0) return
-
     let lastTime = performance.now()
 
     const step = (time) => {
       const delta = time - lastTime
       lastTime = time
-      setOffset((prev) => (prev + (slideSpeed * delta) / 1000) % (imageSize * prizeImages.length))
+      setOffset((prev) => (prev + (slideSpeed * delta) / 1000) % ((imageSize + gap) * prizeImages.length))
       requestAnimationFrame(step)
     }
 
     const animationFrame = requestAnimationFrame(step)
     return () => cancelAnimationFrame(animationFrame)
-  }, [slideSpeed, imageSize])
+  }, [slideSpeed, imageSize, gap])
 
   if (prizeImages.length === 0) return <p>No prizes found!</p>
 
-  const formatName = (filename) => {
-    let name = filename.split(".")[0]
-
-    name = name.replace(/[^a-zA-Z\s-]+$/g, "")
-
-    return name
+  const formatName = (rawName) =>
+    rawName
       .split("-")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ")
-      .trim() + "!"
-  }
+      .join(" ") + "!"
 
   return (
     <div
@@ -60,8 +58,7 @@ export default function PrizeCarousel({
       >
         {prizeImages.concat(prizeImages).map((img, idx) => {
           const color = idx % 2 === 0 ? redColor : blueColor
-          const filename = img.split("/").pop()
-          const name = formatName(filename)
+          const name = formatName(img.name)
 
           return (
             <div
@@ -70,7 +67,7 @@ export default function PrizeCarousel({
                 display: "flex",
                 flexDirection: "column",
                 alignItems: "center",
-                margin: "0 10px",
+                marginRight: `${gap}px`,
                 flexShrink: 0,
               }}
             >
@@ -88,7 +85,7 @@ export default function PrizeCarousel({
                 }}
               >
                 <img
-                  src={img}
+                  src={img.src}
                   alt={name}
                   style={{
                     maxWidth: "100%",
@@ -97,7 +94,7 @@ export default function PrizeCarousel({
                   }}
                 />
               </div>
-              <p style={{ marginTop: "0.5rem", fontWeight: "bold" }}>{name}</p>
+              <p style={{ marginTop: "0.5rem", fontWeight: "bold", textAlign: "center" }}>{name}</p>
             </div>
           )
         })}
