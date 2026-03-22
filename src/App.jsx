@@ -7,36 +7,34 @@ import pointer from './images/pointer.png'
 
 function App() {
   useEffect(() => {
-    const setDefault = () => {
-      document.body.style.cursor = `url(${cursor}) 0 0, auto`
-    }
+    document.body.style.cursor = `url(${cursor}) 0 0, auto`
 
-    const setPointer = () => {
-      document.body.style.cursor = `url(${pointer}) 0 0, pointer`
-    }
-
-    setDefault()
-
-    document.addEventListener('mouseover', (e) => {
+    const handleMouseOver = (e) => {
       const el = e.target
       if (
         el.closest(
           'button, a, input, textarea, select, label, .kb-interactive, .ks-card, .faq-card, .hero a, .hero button'
         )
       ) {
-        setPointer()
+        document.body.style.cursor = `url(${pointer}) 0 0, pointer`
       } else {
-        setDefault()
+        document.body.style.cursor = `url(${cursor}) 0 0, auto`
       }
-    })
+    }
 
-    const handleMouseDown = () => setPointer()
-    const handleMouseUp = () => setDefault()
+    const handleMouseDown = () => {
+      document.body.style.cursor = `url(${pointer}) 0 0, pointer`
+    }
+    const handleMouseUp = () => {
+      document.body.style.cursor = `url(${cursor}) 0 0, auto`
+    }
 
+    document.addEventListener('mouseover', handleMouseOver)
     document.addEventListener('mousedown', handleMouseDown)
     document.addEventListener('mouseup', handleMouseUp)
 
     return () => {
+      document.removeEventListener('mouseover', handleMouseOver)
       document.removeEventListener('mousedown', handleMouseDown)
       document.removeEventListener('mouseup', handleMouseUp)
     }

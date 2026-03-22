@@ -65,3 +65,25 @@ a:focus {
   outline: 2px solid #294e7a;
   outline-offset: 2px;
 }
+
+body {
+  cursor: url('./images/cursor.png') 0 0, auto;
+}
+
+button,
+a,
+input,
+textarea,
+select,
+label,
+.kb-interactive,
+.ks-card,
+.faq-card,
+.hero a,
+.hero button,
+.btn,
+.btn-primary,
+.btn-rsvp,
+.flag-link {
+  cursor: url('./images/pointer.png') 0 0, pointer;
+}
