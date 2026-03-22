@@ -94,7 +94,7 @@ export default function PrizeCarousel({
                   }}
                 />
               </div>
-              <p style={{ marginTop: "0.5rem", fontWeight: "bold", textAlign: "center" }}>{name}</p>
+              <p style={{ marginTop: "0.5rem", fontWeight: "bold", textAlign: "center" , color: "white"}}>{name}</p>
             </div>
           )
         })}

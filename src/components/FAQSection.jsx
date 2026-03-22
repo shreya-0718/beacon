@@ -82,9 +82,6 @@ const FAQSection = () => {
     <section className="faq-section">
       <div className="faq-header">
         <h2 className="faq-title">Frequently Asked Questions</h2>
-        <p className="faq-subtitle">
-          Everything you need to know about Beacon
-        </p>
       </div>
 
       <div className="faq-grid">
