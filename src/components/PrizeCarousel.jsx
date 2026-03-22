@@ -31,11 +31,15 @@ export default function PrizeCarousel({
   if (prizeImages.length === 0) return <p>No prizes found!</p>
 
   const formatName = (filename) => {
-    const nameWithoutExt = filename.split(".")[0]
-    return nameWithoutExt
+    let name = filename.split(".")[0]
+
+    name = name.replace(/[^a-zA-Z\s-]+$/g, "")
+
+    return name
       .split("-")
       .map((word) => word.charAt(0).toUpperCase() + word.slice(1))
-      .join(" ") + "!"
+      .join(" ")
+      .trim() + "!"
   }
 
   return (
