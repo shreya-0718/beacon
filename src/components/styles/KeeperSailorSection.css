@@ -15,7 +15,6 @@
 
 .ks-section {
   padding: 60px 20px;
-  background: white;
   display: flex;
   justify-content: center;
 }
@@ -33,7 +32,6 @@
   padding: 28px 24px;
   position: relative;
   z-index: 1;
-  background: white;
   text-align: left;
   clip-path: polygon(
     0% 2%, 3% 0%, 6% 3%, 9% 1%, 12% 4%, 15% 0%, 18% 3%, 21% 1%, 24% 4%, 27% 0%,

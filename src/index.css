@@ -1,4 +1,8 @@
-@import './styles/colors.css';
+html {
+  background-image: url('./images/watercolor-bg.jpg');
+  background-size: 100% 100%;
+  background-repeat: no-repeat;
+}
 
 * {
   margin: 0;
@@ -14,7 +18,6 @@ html {
 body {
 
   color: var(--color-dark);
-  background-color: var(--color-white);
   line-height: 1.6;
   font-size: 1rem;
 }

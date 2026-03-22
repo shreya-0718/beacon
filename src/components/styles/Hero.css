@@ -22,7 +22,7 @@
     linear-gradient(0deg, transparent calc(var(--graph-square-size) - 1px), #d0d0d0 calc(var(--graph-square-size) - 1px)),
     linear-gradient(90deg, transparent calc(var(--graph-square-size) - 1px), #d0d0d0 calc(var(--graph-square-size) - 1px));
   background-size: var(--graph-square-size) var(--graph-square-size);
-  background-color: white;
+  background-color: transparent;
   display: flex;
   align-items: center;
   justify-content: center;
