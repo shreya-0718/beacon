@@ -7,31 +7,38 @@ import pointer from './images/pointer.png'
 
 function App() {
   useEffect(() => {
-    document.body.style.cursor = `url(${cursor}) 16 16, auto`
-
-    const selectors =
-      'button, a, input, textarea, select, label, .kb-interactive, .ks-card, .hero a, .hero button'
-
-    const elements = document.querySelectorAll(selectors)
-
-    const handleEnter = (el) => {
-      el.style.cursor = `url(${pointer}) 16 16, pointer`
+    const setDefault = () => {
+      document.body.style.cursor = `url(${cursor}) 0 0, auto`
     }
 
-    const handleLeave = (el) => {
-      el.style.cursor = `url(${cursor}) 16 16, auto`
+    const setPointer = () => {
+      document.body.style.cursor = `url(${pointer}) 0 0, pointer`
     }
 
-    elements.forEach((el) => {
-      el.addEventListener('mouseenter', () => handleEnter(el))
-      el.addEventListener('mouseleave', () => handleLeave(el))
+    setDefault()
+
+    document.addEventListener('mouseover', (e) => {
+      const el = e.target
+      if (
+        el.closest(
+          'button, a, input, textarea, select, label, .kb-interactive, .ks-card, .faq-card, .hero a, .hero button'
+        )
+      ) {
+        setPointer()
+      } else {
+        setDefault()
+      }
     })
 
+    const handleMouseDown = () => setPointer()
+    const handleMouseUp = () => setDefault()
+
+    document.addEventListener('mousedown', handleMouseDown)
+    document.addEventListener('mouseup', handleMouseUp)
+
     return () => {
-      elements.forEach((el) => {
-        el.onmouseenter = null
-        el.onmouseleave = null
-      })
+      document.removeEventListener('mousedown', handleMouseDown)
+      document.removeEventListener('mouseup', handleMouseUp)
     }
   }, [])
 
