@@ -1,0 +1,29 @@
+.footer {
+  position: relative;
+  margin-top: 0;
+}
+
+.footer-image-wrapper {
+  position: relative;
+  width: 100%;
+  line-height: 0;
+}
+
+.footer-image {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.footer-bottom {
+  position: absolute;
+  bottom: 20px;
+  right: 40px;
+  color: white;
+  z-index: 2;
+}
+
+
+.footer-bottom p {
+  color: white;
+}
