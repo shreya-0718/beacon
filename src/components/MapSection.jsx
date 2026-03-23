@@ -14,15 +14,15 @@ import sailor4 from '../images/sailor-map/stage-4.png';
 
 const stagesData = {
   keeper: [
-    { img: keeper1, caption: 'Keeper Stage 1', scale: 1 },
-    { img: keeper2, caption: 'Keeper Stage 2', scale: 1.2 },
-    { img: keeper3, caption: 'Keeper Stage 3', scale: 0.9 },
-    { img: keeper4, caption: 'Keeper Stage 4', scale: 1 },
+    { img: keeper1, caption: 'Spark an Idea', scale: 1 },
+    { img: keeper2, caption: 'Build Your Project', scale: 1.3 },
+    { img: keeper3, caption: 'Write your Tutorial', scale: 1.2 },
+    { img: keeper4, caption: 'Ship and Publish!', scale: 1.4 },
   ],
   sailor: [
-    { img: sailor1, caption: 'Sailor Stage 1', scale: 1 },
-    { img: sailor2, caption: 'Sailor Stage 2', scale: 2 },
-    { img: sailor3, caption: 'Sailor Stage 3', scale: 1.3 },
+    { img: sailor1, caption: 'Choose a Topic', scale: 1 },
+    { img: sailor2, caption: 'Pick a Tutorial to Follow', scale: 2 },
+    { img: sailor3, caption: 'Build and Log Hours!', scale: 1.3 },
     { img: sailor4, caption: '- Ship! - ', scale: 1.4 },
   ],
 };
@@ -31,7 +31,7 @@ const positions = [
   { top: 50, left: 50 },    
   { top: 90, left: 460 },  
   { top: 220, left: 40 },  
-  { top: 308, left: 500 }  
+  { top: 308, left: 522 }  
 ];
 
 const MapSection = ({ selectedPath }) => {

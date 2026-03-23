@@ -6,6 +6,7 @@ import KeeperSailorSection from '../components/KeeperSailorSection';
 import MapSection from '../components/MapSection';
 import FAQSection from '../components/FAQSection';
 import PrizeCarousel from "../components/PrizeCarousel";
+import Footer from '../components/Footer';
 
 function Home() {
   console.log('Home component rendering');
@@ -21,6 +22,7 @@ function Home() {
       <MapSection selectedPath={selectedPath}/>
       <PrizeCarousel/>
       <FAQSection/>
+      <Footer/>
     </div>
   );
 }
