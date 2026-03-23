@@ -12,6 +12,7 @@
   box-shadow: 0 0px 16px rgba(0,0,0,0.1);
   opacity: 0;
   transition: opacity 1s ease-in;
+  padding-bottom: 20px;
 }
 
 .map-section.visible {
@@ -53,6 +54,18 @@
   text-align: center;
   color: #000000;
   font-family: inherit;
+}
+
+.map-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 18px;
+  color: var(--color-ocean);
+  font-family: inherit;
+  z-index: 1;
 }
 
 @media (max-width: 768px) {

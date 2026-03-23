@@ -68,6 +68,11 @@ const MapSection = ({ selectedPath }) => {
 
   return (
     <div className={`map-section ${mapVisible ? 'visible' : ''}`} ref={mapRef}>
+      {!selectedPath && (
+        <div className="map-placeholder">
+          Press the buttons above to see something cool here!
+        </div>
+      )}
       {selectedPath && (
         <svg className="map-path" viewBox="0 0 600 400">
   <path
